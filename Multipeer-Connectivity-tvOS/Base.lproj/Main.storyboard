@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Multipeer_Connectivity_tvOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +19,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNy-g3-mgC">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59720631544502623" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUY-aa-oj6">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqh-Y7-WRE">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cqh-Y7-WRE" secondAttribute="height" multiplier="1:1" id="g30-4g-HLm"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="グループを作成"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0t-iG-i9Q">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="x0t-iG-i9Q" secondAttribute="height" multiplier="1:1" id="Vyy-5e-aaS"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="グループに参加"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1000" id="G9z-mk-iKO"/>
+                                    <constraint firstAttribute="trailing" secondItem="x0t-iG-i9Q" secondAttribute="trailing" constant="40" id="HPV-Ml-Lfc"/>
+                                    <constraint firstItem="cqh-Y7-WRE" firstAttribute="top" secondItem="YUY-aa-oj6" secondAttribute="top" constant="40" id="Krg-EV-H2l"/>
+                                    <constraint firstAttribute="bottom" secondItem="cqh-Y7-WRE" secondAttribute="bottom" constant="40" id="R19-S0-aw5"/>
+                                    <constraint firstAttribute="bottom" secondItem="x0t-iG-i9Q" secondAttribute="bottom" constant="40" id="YL9-Vb-xiA"/>
+                                    <constraint firstItem="cqh-Y7-WRE" firstAttribute="leading" secondItem="YUY-aa-oj6" secondAttribute="leading" constant="40" id="rtm-gY-hDE"/>
+                                    <constraint firstAttribute="height" constant="450" id="t7P-Ee-W9R"/>
+                                    <constraint firstItem="x0t-iG-i9Q" firstAttribute="top" secondItem="YUY-aa-oj6" secondAttribute="top" constant="40" id="xhJ-Xe-LCn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kNy-g3-mgC" secondAttribute="bottom" id="0Ms-4B-Po1"/>
+                            <constraint firstItem="YUY-aa-oj6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4OD-fW-Njv"/>
+                            <constraint firstItem="kNy-g3-mgC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="H2Y-LD-wzh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kNy-g3-mgC" secondAttribute="trailing" constant="-20" id="UN9-SK-hmb"/>
+                            <constraint firstItem="kNy-g3-mgC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="o2Y-l0-XDG"/>
+                            <constraint firstItem="YUY-aa-oj6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vg1-ee-Xjf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
