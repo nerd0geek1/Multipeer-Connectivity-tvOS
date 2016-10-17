@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		73222E121DB505D200CA0E44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73222E111DB505D200CA0E44 /* AppDelegate.swift */; };
 		73222E141DB505D700CA0E44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73222E131DB505D700CA0E44 /* ViewController.swift */; };
+		73222E1C1DB50AA600CA0E44 /* MultipeerAdvertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73222E181DB50AA600CA0E44 /* MultipeerAdvertiser.swift */; };
+		73222E1D1DB50AA600CA0E44 /* MultipeerBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73222E191DB50AA600CA0E44 /* MultipeerBrowser.swift */; };
+		73222E1E1DB50AA600CA0E44 /* MultipeerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73222E1A1DB50AA600CA0E44 /* MultipeerResource.swift */; };
+		73222E1F1DB50AA600CA0E44 /* MultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73222E1B1DB50AA600CA0E44 /* MultipeerSession.swift */; };
 		73D02BE31DAE4FD6009483E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D02BE11DAE4FD6009483E1 /* Main.storyboard */; };
 		73D02BE51DAE4FD6009483E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D02BE41DAE4FD6009483E1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,6 +20,10 @@
 /* Begin PBXFileReference section */
 		73222E111DB505D200CA0E44 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73222E131DB505D700CA0E44 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73222E181DB50AA600CA0E44 /* MultipeerAdvertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerAdvertiser.swift; sourceTree = "<group>"; };
+		73222E191DB50AA600CA0E44 /* MultipeerBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerBrowser.swift; sourceTree = "<group>"; };
+		73222E1A1DB50AA600CA0E44 /* MultipeerResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerResource.swift; sourceTree = "<group>"; };
+		73222E1B1DB50AA600CA0E44 /* MultipeerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerSession.swift; sourceTree = "<group>"; };
 		73D02BDA1DAE4FD6009483E1 /* Multipeer-Connectivity-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multipeer-Connectivity-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D02BE21DAE4FD6009483E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73D02BE41DAE4FD6009483E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				73222E0F1DB505B400CA0E44 /* application */,
+				73222E161DB50AA600CA0E44 /* feature */,
 				73222E101DB505BB00CA0E44 /* viewcontrollers */,
 			);
 			path = classes;
@@ -56,6 +65,25 @@
 				73222E131DB505D700CA0E44 /* ViewController.swift */,
 			);
 			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		73222E161DB50AA600CA0E44 /* feature */ = {
+			isa = PBXGroup;
+			children = (
+				73222E171DB50AA600CA0E44 /* p2p */,
+			);
+			path = feature;
+			sourceTree = "<group>";
+		};
+		73222E171DB50AA600CA0E44 /* p2p */ = {
+			isa = PBXGroup;
+			children = (
+				73222E181DB50AA600CA0E44 /* MultipeerAdvertiser.swift */,
+				73222E191DB50AA600CA0E44 /* MultipeerBrowser.swift */,
+				73222E1A1DB50AA600CA0E44 /* MultipeerResource.swift */,
+				73222E1B1DB50AA600CA0E44 /* MultipeerSession.swift */,
+			);
+			path = p2p;
 			sourceTree = "<group>";
 		};
 		73D02BD11DAE4FD5009483E1 = {
@@ -176,8 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73222E1F1DB50AA600CA0E44 /* MultipeerSession.swift in Sources */,
+				73222E1D1DB50AA600CA0E44 /* MultipeerBrowser.swift in Sources */,
 				73222E141DB505D700CA0E44 /* ViewController.swift in Sources */,
 				73222E121DB505D200CA0E44 /* AppDelegate.swift in Sources */,
+				73222E1E1DB50AA600CA0E44 /* MultipeerResource.swift in Sources */,
+				73222E1C1DB50AA600CA0E44 /* MultipeerAdvertiser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
