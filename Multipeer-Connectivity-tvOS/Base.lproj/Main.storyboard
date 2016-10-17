@@ -31,6 +31,9 @@
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" title="グループを作成"/>
+                                        <connections>
+                                            <action selector="tapMakeGroupButton" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="JTd-xm-dHz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0t-iG-i9Q">
                                         <constraints>
@@ -38,6 +41,9 @@
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" title="グループに参加"/>
+                                        <connections>
+                                            <action selector="tapJoinGroupButton" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="8L0-wn-1fZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,6 +69,10 @@
                             <constraint firstItem="YUY-aa-oj6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vg1-ee-Xjf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="kNy-g3-mgC" id="WkP-a0-VbH"/>
+                        <outlet property="buttonsView" destination="YUY-aa-oj6" id="cxY-kF-NWT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
