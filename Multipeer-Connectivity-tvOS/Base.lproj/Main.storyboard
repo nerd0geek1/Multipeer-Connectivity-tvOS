@@ -20,6 +20,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnu-ac-qfJ">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNy-g3-mgC">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59720631544502623" colorSpace="calibratedRGB"/>
                             </view>
@@ -31,6 +36,9 @@
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" title="グループを作成"/>
+                                        <connections>
+                                            <action selector="tapMakeGroupButton" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="JTd-xm-dHz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0t-iG-i9Q">
                                         <constraints>
@@ -38,6 +46,9 @@
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" title="グループに参加"/>
+                                        <connections>
+                                            <action selector="tapJoinGroupButton" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="8L0-wn-1fZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,12 +68,21 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kNy-g3-mgC" secondAttribute="bottom" id="0Ms-4B-Po1"/>
                             <constraint firstItem="YUY-aa-oj6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4OD-fW-Njv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rnu-ac-qfJ" secondAttribute="bottom" id="ApD-e7-ckH"/>
                             <constraint firstItem="kNy-g3-mgC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="H2Y-LD-wzh"/>
+                            <constraint firstItem="Rnu-ac-qfJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KVF-0i-BWM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kNy-g3-mgC" secondAttribute="trailing" constant="-20" id="UN9-SK-hmb"/>
+                            <constraint firstItem="Rnu-ac-qfJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="W5V-jP-QHT"/>
                             <constraint firstItem="kNy-g3-mgC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="o2Y-l0-XDG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rnu-ac-qfJ" secondAttribute="trailing" constant="-20" id="o78-Aa-pJj"/>
                             <constraint firstItem="YUY-aa-oj6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vg1-ee-Xjf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="kNy-g3-mgC" id="WkP-a0-VbH"/>
+                        <outlet property="buttonsView" destination="YUY-aa-oj6" id="cxY-kF-NWT"/>
+                        <outlet property="textView" destination="Rnu-ac-qfJ" id="wwk-EI-gpJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
