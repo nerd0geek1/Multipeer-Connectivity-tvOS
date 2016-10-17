@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73D02BDE1DAE4FD6009483E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D02BDD1DAE4FD6009483E1 /* AppDelegate.swift */; };
-		73D02BE01DAE4FD6009483E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D02BDF1DAE4FD6009483E1 /* ViewController.swift */; };
+		73222E121DB505D200CA0E44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73222E111DB505D200CA0E44 /* AppDelegate.swift */; };
+		73222E141DB505D700CA0E44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73222E131DB505D700CA0E44 /* ViewController.swift */; };
 		73D02BE31DAE4FD6009483E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D02BE11DAE4FD6009483E1 /* Main.storyboard */; };
 		73D02BE51DAE4FD6009483E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D02BE41DAE4FD6009483E1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73222E111DB505D200CA0E44 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		73222E131DB505D700CA0E44 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73D02BDA1DAE4FD6009483E1 /* Multipeer-Connectivity-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multipeer-Connectivity-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		73D02BDD1DAE4FD6009483E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73D02BDF1DAE4FD6009483E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73D02BE21DAE4FD6009483E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73D02BE41DAE4FD6009483E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73D02BE61DAE4FD6009483E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +33,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73222E0E1DB505AF00CA0E44 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				73222E0F1DB505B400CA0E44 /* application */,
+				73222E101DB505BB00CA0E44 /* viewcontrollers */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		73222E0F1DB505B400CA0E44 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				73222E111DB505D200CA0E44 /* AppDelegate.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		73222E101DB505BB00CA0E44 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				73222E131DB505D700CA0E44 /* ViewController.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
 		73D02BD11DAE4FD5009483E1 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +77,7 @@
 		73D02BDC1DAE4FD6009483E1 /* Multipeer-Connectivity-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				73D02BDD1DAE4FD6009483E1 /* AppDelegate.swift */,
-				73D02BDF1DAE4FD6009483E1 /* ViewController.swift */,
+				73222E0E1DB505AF00CA0E44 /* classes */,
 				73D02BE11DAE4FD6009483E1 /* Main.storyboard */,
 				73D02BE41DAE4FD6009483E1 /* Assets.xcassets */,
 				73D02BE61DAE4FD6009483E1 /* Info.plist */,
@@ -94,6 +118,7 @@
 					73D02BD91DAE4FD5009483E1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5GKRYZ5VBH;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -133,8 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73D02BE01DAE4FD6009483E1 /* ViewController.swift in Sources */,
-				73D02BDE1DAE4FD6009483E1 /* AppDelegate.swift in Sources */,
+				73222E141DB505D700CA0E44 /* ViewController.swift in Sources */,
+				73222E121DB505D200CA0E44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,11 +273,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5GKRYZ5VBH;
 				INFOPLIST_FILE = "Multipeer-Connectivity-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nerd0geek1.Multipeer-Connectivity-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -262,6 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5GKRYZ5VBH;
 				INFOPLIST_FILE = "Multipeer-Connectivity-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -290,6 +318,7 @@
 				73D02BEB1DAE4FD6009483E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
