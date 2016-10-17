@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var buttonsView: UIView!
 
@@ -32,7 +34,9 @@ class ViewController: UIViewController {
             }
         }
         MultipeerSession.sharedInstance.didReceiveResource = { resource in
-            NSLog("resource:\(resource.text)")
+            DispatchQueue.main.async {
+                self.textView.text.append(resource.text + "\n\n")
+            }
         }
 
         MultipeerBrowser.sharedInstance.setup(with: MultipeerSession.sharedInstance)
